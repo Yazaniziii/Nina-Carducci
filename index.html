@@ -44,7 +44,9 @@
 			</div>
 			<div class="carousel-inner carousel-desktop">
 				<div class="carousel-item active">
-					<img src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.webp"
+					<img srcset="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash-small.webp 650w, ./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.webp 1920w"
+						sizes="(max-width: 650px) 650px, 1920px"
+						src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.webp"
 						class="d-block w-100 slider-desktop" alt="embrassade des mariés">
 				</div>
 				<div class="carousel-item">
@@ -91,8 +93,11 @@
 		<h3 class="title">Portfolio</h3>
 		<div class="container py-3">
 			<div class="gallery" style="display: none">
-				<img alt="concert de musique" data-gallery-tag="Concert" class="gallery-item"
-					src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp" />
+
+				<img srcset="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash-small.webp 420w,
+							 ./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp 612w"
+					sizes="(max-width: 650px) 420px, 612px" alt="concert de musique" data-gallery-tag="Concert"
+					class="gallery-item" src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp" />
 
 				<img alt="portrait homme en costume" data-gallery-tag="Entreprises" class="gallery-item"
 					src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.webp" />
@@ -119,9 +124,10 @@
 				<img alt="portrait d'une femme qui rigole au travail" data-gallery-tag="Entreprises"
 					class="gallery-item"
 					src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.webp" />
-
 			</div>
+
 		</div>
+
 		<div class="quote">
 			<figure>
 				<blockquote>
@@ -203,8 +209,8 @@
 		</div>
 	</section>
 
-	<script async src="./assets/bootstrap/bootstrap.bundle.min.js"></script>
-	<script async src="https://code.jquery.com/jquery-3.4.1.min.js"
+	<script src="./assets/bootstrap/bootstrap.bundle.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
 		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script async src="./assets/maugallery.js"></script>
 	<script async src="./assets/scripts.js"></script>
