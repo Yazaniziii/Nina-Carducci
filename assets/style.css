@@ -83,11 +83,8 @@ body {
 	font-family: 'Spectral';
 	font-weight: 800;
 	font-style: italic;
+	display: block;
 	width: 60%;
-}
-#about-me p {
-	width: 80%;
-	font-size: 14px;
 }
 
 .title{
@@ -240,6 +237,8 @@ input[type="submit"] {
 	background-color: #BEB45A;
 	padding: .5em 1em
 }
+
+
 
 @media all and (max-width: 1180px) {
 	.picture {
