@@ -8,13 +8,15 @@
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" rel="stylesheet">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap"
+		rel="stylesheet">
 
 	<title>Nina Carducci, photographe professionelle localisé à Bordeaux, vous propose de saisir vos meilleurs et
 		merveilleux moments au travers de son regard et sa technique</title>
 	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.css">
-	<link rel="stylesheet" href="./assets/style.min.css">
-	
+	<link rel="stylesheet" href="./assets/style.css">
+
 </head>
 
 <body>
@@ -101,10 +103,13 @@
 		</section>
 
 		<section id="about">
-			<div class="picture left">
-				<img srcset="./assets/images/nina-small.webp 450w, ./assets/images/nina.webp 550w"
-					sizes="(max-width: 650px) 450px, 550px" alt="portrait de Nina" src="./assets/images/nina.webp">
-			</div>
+			<picture class="picture left">
+				<source srcset="./assets/images/nina-450.webp 450w, ./assets/images/nina-550.webp 550w"
+					sizes="(max-width: 575px) 450px, 550px" type="image/webp">
+				<img src="./assets/images/nina-550.jpg" alt="Nina Carducci"
+					srcset="./assets/images/nina-450.jpg 450w, ./assets/images/nina-550.jpg"
+					sizes="(max-width: 575px) 450px, 550px">
+			</picture>
 			<div id="about-me">
 				<h2 class="about-me__title">A propos de moi</h2>
 				<p class="about-me__introduction">Devenir photographe était pour moi une évidence. Comme si j’y étais
@@ -288,29 +293,33 @@
 				<figcaption class="quote__author">- Richard Avedon</figcaption>
 			</figure>
 		</section>
-		<section id="contact">
-			<div class="container">
-				<div class="form-container">
-					<h3>Une question ? Une demande de devis ?</h3>
-					<p> N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24 heures</p>
-					<form action="" method="post">
-						<label for="name">Nom</label>
-						<input aria-label="name" type="text" name="nom" id="nom">
-						<label for="email">Email</label>
-						<input aria-label="email" type="email" name="email" id="email">
-						<label for="message">Message</label>
-						<textarea name="message" id="message" cols="30" rows="10"></textarea>
-						<input aria-label="submit" type="submit" value="Envoyer" />
-					</form>
-				</div>
-				<div class="picture right">
-					<img srcset="./assets/images/camera-small.webp 415w,
-							 ./assets/images/camera.webp 550w" sizes="(max-width: 650px) 415px, 550" alt="camera photographe"
-						src="./assets/images/camera.webp">
-				</div>
-			</div>
-		</section>
+
 	</main>
+
+	<section id="contact">
+		<div class="container">
+			<div class="form-container">
+				<h3>Une question ? Une demande de devis ?</h3>
+				<p> N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24 heures</p>
+				<form action="" method="post">
+					<label for="name">Nom</label>
+					<input aria-label="name" type="text" name="nom" id="nom">
+					<label for="email">Email</label>
+					<input aria-label="email" type="email" name="email" id="email">
+					<label for="message">Message</label>
+					<textarea name="message" id="message" cols="30" rows="10"></textarea>
+					<input aria-label="submit" type="submit" value="Envoyer" />
+				</form>
+			</div>
+			<picture class="picture right">
+				<source srcset="./assets/images/camera-375.webp 375w, ./assets/images/camera-550.webp 550w"
+					sizes="(max-width: 575px) 375px, 550px" type="image/webp">
+				<img src="./assets/images/camera-550.jpg" alt="camera photo"
+					srcset="./assets/images/camera-375.jpg 375w, ./assets/images/camera-550.jpg 550w"
+					sizes="(max-width: 575px) 375px, 550px">
+			</picture>
+		</div>
+	</section>
 
 	<footer>
 		<h2 itemprop="name">Nina Carducci, Photographe</h2>
@@ -328,6 +337,7 @@
 			</div>
 		</div>
 	</footer>
+
 
 	<script src="./assets/bootstrap/bootstrap.bundle.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
