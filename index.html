@@ -10,12 +10,16 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link
 		href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap"
+		rel="preload">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap"
 		rel="stylesheet">
+
 
 	<title>Nina Carducci, photographe professionelle localisé à Bordeaux, vous propose de saisir vos meilleurs et
 		merveilleux moments au travers de son regard et sa technique</title>
 	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.css">
-	<link rel="stylesheet" href="./assets/style.css">
+	<link rel="stylesheet" href="./assets/style.min.css">
 
 </head>
 
@@ -104,11 +108,7 @@
 
 		<section id="about">
 			<picture class="picture left">
-				<source srcset="./assets/images/nina-450.webp 450w, ./assets/images/nina-550.webp 550w"
-					sizes="(max-width: 575px) 450px, 550px" type="image/webp">
-				<img src="./assets/images/nina-550.jpg" alt="Nina Carducci"
-					srcset="./assets/images/nina-450.jpg 450w, ./assets/images/nina-550.jpg"
-					sizes="(max-width: 575px) 450px, 550px">
+				<img src="./assets/images/nina-550.jpg" alt="Nina Carducci">
 			</picture>
 			<div id="about-me">
 				<h2 class="about-me__title">A propos de moi</h2>
@@ -133,97 +133,53 @@
 				<div class="gallery" style="display: none">
 
 					<picture class="gallery-item" data-gallery-tag="Concert">
-						<source
-							srcset="./assets/images/gallery/concerts/concert-foule-560.webp 560w, ./assets/images/gallery/concerts/concert-foule-612.webp 612w"
-							sizes="(max-width:575px) 560x, 612px" type="image/webp" data-gallery-tag="Concert" />
-						<img src="./assets/images/gallery/concerts/concert-foule-612.jpg" class="gallery-item"
-							alt="concert de musique"
-							srcset="./assets/images/gallery/concerts/concert-foule-560.jpg 560w, ./assets/images/gallery/concerts/concert-foule-612.jpg 612w"
-							sizes="(max-width:575px) 560x, 612px" data-gallery-tag="Concert" aria-label="Portfolio"
+						<img src="./assets/images/gallery/concerts/concert-foule-560.webp" class="gallery-item"
+							alt="concert de musique" data-gallery-tag="Concert" aria-label="Portfolio" itemprop="image">
+					</picture>
+
+					<picture class="gallery-item" data-gallery-tag="Entreprises">
+						<img src="./assets/images/gallery/entreprise/portrait-costume-560.webp" class="gallery-item"
+							alt="portrait homme en costume" aria-label="Portfolio" data-gallery-tag="Entreprises"
 							itemprop="image">
 					</picture>
 
 					<picture class="gallery-item" data-gallery-tag="Entreprises">
-						<source
-							srcset="./assets/images/gallery/entreprise/portrait-costume-560.webp 560w, ./assets/images/gallery/entreprise/portrait-costume-1000.webp 1000w"
-							sizes="(max-width:575px) 560x, 1000px" type="image/webp">
-						<img src="./assets/images/gallery/entreprise/portrait-costume-1000.jpg" class="gallery-item"
-							alt="portrait homme en costume"
-							srcset="./assets/images/gallery/entreprise/portrait-costume-560.jpg 560w, ./assets/images/gallery/entreprise/portrait-costume-1000.jpg 1000w"
-							sizes="(max-width:575px) 560x, 1000px" aria-label="Portfolio" data-gallery-tag="Entreprises"
-							itemprop="image">
-					</picture>
-
-					<picture class="gallery-item" data-gallery-tag="Entreprises">
-						<source
-							srcset="./assets/images/gallery/entreprise/collegue-560.webp 560w, ./assets/images/gallery/entreprise/collegue-1021.webp 1021w"
-							sizes="(max-width:575px) 560x, 1021px" type="image/webp">
-						<img src="./assets/images/gallery/entreprise/collegue-1021.jpg" class="gallery-item"
-							alt="une femme qui sourie au travail"
-							srcset="./assets/images/gallery/entreprise/collegue-560.jpg 560w, ./assets/images/gallery/entreprise/collegue-1021.jpg 1021w"
-							sizes="(max-width:575px) 560x, 1021px" aria-label="Portfolio" data-gallery-tag="Entreprises"
+						<img src="./assets/images/gallery/entreprise/collegue-560.webp" class="gallery-item"
+							alt="une femme qui sourie au travail" aria-label="Portfolio" data-gallery-tag="Entreprises"
 							itemprop="image">
 					</picture>
 
 					<picture class="gallery-item" data-gallery-tag="Mariages">
-						<source
-							srcset="./assets/images/gallery/mariage/mains-560.webp 560w, ./assets/images/gallery/mariage/mains-1113.webp 1113w"
-							sizes="(max-width:575px) 560x, 1113px" type="image/webp">
-						<img src="./assets/images/gallery/mariage/mains-1113.jpg" class="gallery-item"
-							alt="deux mains symbolique qui s'approchent pour celebrer leur union"
-							srcset="./assets/images/gallery/mariage/mains-560.jpg 560w, ./assets/images/gallery/mariage/mains-1113.jpg 1113w"
-							sizes="(max-width:575px) 560x, 1021px" aria-label="Portfolio" data-gallery-tag="Mariages"
+						<img src="./assets/images/gallery/mariage/mains-560.webp" class="gallery-item"
+							alt="deux mains symbolique qui s'approchent pour celebrer leur union" aria-label="Portfolio"
+							data-gallery-tag="Mariages" itemprop="image">
+					</picture>
+
+					<picture class="gallery-item" data-gallery-tag="Portrait">
+						<img src="./assets/images/gallery/portraits/yeux-fermer-553.webp" class="gallery-item"
+							alt="portrait d'un homme qui ferme les yeux" data-gallery-tag="Portrait" itemprop="image" />
+					</picture>
+
+					<picture class="gallery-item" data-gallery-tag="Mariages">
+						<img src="./assets/images/gallery/mariage/mariage-560.webp" class="gallery-item"
+							alt="deux jeunes mariés qui ce regardent en souriant" data-gallery-tag="Mariages"
 							itemprop="image">
 					</picture>
 
 					<picture class="gallery-item" data-gallery-tag="Portrait">
-						<source srcset="./assets/images/gallery/portraits/yeux-fermer-553.webp 553w"
-							sizes="(max-width: 575px) 553px">
-						<img src="./assets/images/gallery/portraits/yeux-fermer-553.jpg" class="gallery-item"
-							alt="portrait d'un homme qui ferme les yeux"
-							srcset="./assets/images/gallery/portraits/yeux-fermer-553.jpg"
-							sizes="(max-width: 575px) 553px" data-gallery-tag="Portrait" itemprop="image" />
-					</picture>
-
-					<picture class="gallery-item" data-gallery-tag="Mariages">
-						<source
-							srcset="./assets/images/gallery/mariage/mariage-560.webp 560w, ./assets/images/gallery/mariage/mariage-1120.webp 1120w"
-							sizes="(max-width:575px) 560x, 1120px" type="image/webp" data-gallery-tag="Mariages">
-						<img src="./assets/images/gallery/mariage/mariage-1120.jpg" class="gallery-item"
-							alt="deux jeunes mariés qui ce regardent en souriant"
-							srcset="./assets/images/gallery/mariage/mains-560.jpg 560w, ./assets/images/gallery/mariage/mariage-1120.jpg 1120w"
-							sizes="(max-width:575px) 560x, 1021px" data-gallery-tag="Mariages" itemprop="image">
-					</picture>
-
-					<picture class="gallery-item" data-gallery-tag="Portrait">
-						<source
-							srcset="./assets/images/gallery/portraits/portrait-560.webp 560w, ./assets/images/gallery/portraits/portrait-1006.webp 1006w"
-							sizes="(max-width:575px) 560x, 1006px" type="image/webp" data-gallery-tag="Mariages">
-						<img src="./assets/images/gallery/portraits/portrait-1006.jpg" class="gallery-item"
-							alt="portrait d'une femme a lunette"
-							srcset="./assets/images/gallery/portraits/portrait-560.jpg 560w, ./assets/images/gallery/portraits/portrait-1006.jpg 1006w"
-							sizes="(max-width:575px) 560x, 1006px" data-gallery-tag="Portrait" itemprop="image">
+						<img src="./assets/images/gallery/portraits/portrait-560.webp" class="gallery-item"
+							alt="portrait d'une femme a lunette" data-gallery-tag="Portrait" itemprop="image">
 					</picture>
 
 					<picture class="gallery-item" data-gallery-tag="Concert">
-						<source
-							srcset="./assets/images/gallery/concerts/chanteur-560.webp 560w, ./assets/images/gallery/concerts/chanteur-1308.webp 1308w"
-							sizes="(max-width:575px) 560x, 1308px" type="image/webp" data-gallery-tag="Mariages">
-						<img src="./assets/images/gallery/concerts/chanteur-1308.jpg" class="gallery-item"
-							alt="portrait d'un chanteur en plein concert"
-							srcset="./assets/images/gallery/concerts/chanteur-560.jpg 560w, ./assets/images/gallery/concerts/chanteur-1308.jpg 1006w"
-							sizes="(max-width:575px) 560x, 1006px" data-gallery-tag="Concert" itemprop="image">
+						<img src="./assets/images/gallery/concerts/chanteur-560.webp" class="gallery-item"
+							alt="portrait d'un chanteur en plein concert" data-gallery-tag="Concert" itemprop="image">
 					</picture>
 
 					<picture class="gallery-item" data-gallery-tag="Entreprises">
-						<source
-							srcset="./assets/images/gallery/entreprise/rire-travail-560.webp 560w, ./assets/images/gallery/entreprise/rire-travail-1500.webp 1500w"
-							sizes="(max-width:575px) 560x, 1308px" type="image/webp">
-						<img src="./assets/images/gallery/entreprise/rire-travail-1500.jpg" class="gallery-item"
-							alt="portrait d'une femme qui rigole au travail"
-							srcset="./assets/images/gallery/entreprise/rire-travail-560.jpg 560w, ./assets/images/gallery/entreprise/rire-travail-1500.jpg 1500w"
-							sizes="(max-width:575px) 560x, 1500px" data-gallery-tag="Entreprises" aria-label="Portfolio"
-							itemprop="image">
+						<img src="./assets/images/gallery/entreprise/rire-travail-560.webp" class="gallery-item"
+							alt="portrait d'une femme qui rigole au travail" data-gallery-tag="Entreprises"
+							aria-label="Portfolio" itemprop="image">
 					</picture>
 
 				</div>
@@ -301,7 +257,7 @@
 			<div class="form-container">
 				<h3>Une question ? Une demande de devis ?</h3>
 				<p> N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24 heures</p>
-				<form action="" method="post">
+				<form action="submit" method="post">
 					<label for="name">Nom</label>
 					<input aria-label="name" type="text" name="nom" id="nom">
 					<label for="email">Email</label>
@@ -312,16 +268,12 @@
 				</form>
 			</div>
 			<picture class="picture right">
-				<source srcset="./assets/images/camera-375.webp 375w, ./assets/images/camera-550.webp 550w"
-					sizes="(max-width: 575px) 375px, 550px" type="image/webp">
-				<img src="./assets/images/camera-550.jpg" alt="camera photo"
-					srcset="./assets/images/camera-375.jpg 375w, ./assets/images/camera-550.jpg 550w"
-					sizes="(max-width: 575px) 375px, 550px">
+				<img src="./assets/images/camera-375.webp" alt="camera photo">
 			</picture>
 		</div>
 	</section>
 
-	<footer>
+	<!-- <footer>
 		<h2 itemprop="name">Nina Carducci, Photographe</h2>
 		<div class="infos">
 			<div class="location" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
@@ -336,7 +288,7 @@
 				<strong itemprop="telephone">05 56 67 78 89</strong>
 			</div>
 		</div>
-	</footer>
+	</footer> -->
 
 
 	<script src="./assets/bootstrap/bootstrap.bundle.min.js"></script>
